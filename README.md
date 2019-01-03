@@ -21,17 +21,17 @@ Currently, only Python 3.6 is supported.
 
 Python 3.7+ do not work because of [issues in Python-Nubia](https://github.com/facebookincubator/python-nubia/issues/2)).
 
-This repository uses `Pipenv` instead of pip and `venv`. 
+This repository uses `Pipenv` instead of `pip` and `venv`. 
 
-If you're curious and are not familiar with tool, see a great guide to Pipenv [here](https://realpython.com/pipenv-guide/).
+If you're curious and are not familiar with this tool, see a great guide to `Pipenv` [here](https://realpython.com/pipenv-guide/).
 
-You don't need to, though. To use `Toggl-extra` just install PipEnv using `pip3 install pipenv` and follow instructions below.
+You don't need to, though. To use `Toggl-extra` just run `pip3 install pipenv` and follow instructions below.
 
 ## Running Toggl-Extra
 
 Checkout the repository.
 
-Copy `configs/toggl-extra.yaml.sample` to `configs/toggl-extra.yaml` and substitute all words in capital with your Toggl data. 
+Copy `configs/toggl-extra.yaml.sample` to `configs/toggl-extra.yaml` and substitute all words in capitals with your Toggl credentials. 
 
 Run once:
 
@@ -51,7 +51,7 @@ You can also run the same commands just using Toggl-Extra as a command line tool
 
 `./toggl_extra/toggl_extra_cli.py [COMMAND] {PARAMETER1} {PARAMETER2}...` 
 
-### What can this tool do at the moment?
+### Stuff you can do with Toggl-Extra
 
 Use this commands in the interactive shell or as command-line parameters.
 
@@ -61,12 +61,12 @@ Example:
 
 `dump_entries period-type-name="week" period-num=51 year=2018`
 
-Allowed period types: year, quarter, week.  
+Allowed period types: `year`, `quarter`, `week`.  
 
 ### TODO Next
-- Break a query for dumps for long periods into a series of smaller queries (otherwise, Toggl complains).
-- Add unit tests for all public methods.
-- Add scripts for linting and fix all linting issues.
+- Breaking a query for dumps for long periods into a series of smaller queries (otherwise, Toggl complains).
+- Unit tests for all public methods.
+- Scripts for linting and fix all linting issues.
 - Serialising Toggl data as a Pandas DataFrame, which should be used to speed up / simplify further analysis.
 - Saving Toggl data to iCal (which can be imported via Google Calendar UI). 
 - Stats using advanced filtering and pre-saved configuration:
