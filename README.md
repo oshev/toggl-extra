@@ -75,4 +75,3 @@ Allowed period types: `year`, `quarter`, `week`.
 - Graphs for stats based on advanced filtering.
 - Commands for listing last entries.
 - Commands for adding new entries.
-
