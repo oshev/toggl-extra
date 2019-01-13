@@ -90,9 +90,9 @@ def _get_week_start_end(year: int, week: int) -> (datetime, datetime):
     first_date = date(int(year), 1, 1)
     date_end = date(int(year) + 1, 1, 7)
     while first_date < date_end:
-        if first_date.isocalendar()[1] == week and first_date.isocalendar()[0] == year:
+        if first_date.isocalendar()[1] == week + 1 and first_date.isocalendar()[0] == year:
             break
         first_date += timedelta(days=1)
-    datetime_start = datetime.combine(first_date, datetime.min.time())
+    datetime_start = datetime.combine(first_date, datetime.min.time()) - timedelta(days=7)
     datetime_end = datetime.combine(datetime_start.date() + timedelta(days=6), datetime.max.time())
     return datetime_start, datetime_end
